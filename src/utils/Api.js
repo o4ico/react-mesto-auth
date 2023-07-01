@@ -117,7 +117,6 @@ class Api {
       return this._putLikeServer(cardId);
     }
   }
-
 }
 
 const api = new Api({

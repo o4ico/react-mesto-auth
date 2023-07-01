@@ -51,7 +51,7 @@ React.useEffect(() => {
       setCardsData(res);
     })
     .catch(console.error);
-}, []);
+}, [isLoggedIn, navigate]);
 
 //закрытие-открытие попапов
 function closeAllPopups() {

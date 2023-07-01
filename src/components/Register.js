@@ -55,7 +55,7 @@ function Register({
       <main className="main">
         <section className="register">
           <h2 className="register__title">Регистрация</h2>
-          <form className="register__form" onSubmit={handleSubmit} noValidate>
+          <form className="register__form" onSubmit={handleSubmit} noValidate="">
             <input
               className="register__input"
               type="email"

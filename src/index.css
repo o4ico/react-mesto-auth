@@ -71,7 +71,6 @@
 /*InfoTooltip.css*/
 @import url(./blocks/popup/popup.css);
 @import url(./blocks/popup/_opened/popup_opened.css);
-@import url(./blocks/popup/__container/popup__container.css);
 @import url(./blocks/popup/__container/_info/popup__container_info.css);
 @import url(./blocks/popup/__icon/popup__icon.css);
 @import url(./blocks/popup/__close-button/popup__close-button.css);

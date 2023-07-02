@@ -27,9 +27,9 @@ function Login({
     const { email, password } = formValue;
     auth.authorize( email, password )
       .then((data) => {
-        if (data.token){// нужно проверить, есть ли у данных token
+        if (data.token){// проверка, есть ли у данных token
         localStorage.setItem('token', data.token)
-        setFormValue({email: '', password: ''});// сбросьте стейт, затем в колбэке установите
+        setFormValue({email: '', password: ''});// сброс формы
         navigate('/', {replace: true});
         loggiedIn();// стейт loggedIn родительского App как true, стейт отвечающий за статус регистрации(сообщение об успехе или нет)
         }

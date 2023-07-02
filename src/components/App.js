@@ -38,7 +38,7 @@ const [isStatus, setIsStatus] = React.useState(false);
 const navigate = useNavigate();
 
 React.useEffect(() => {
-  api.getInfoServer()
+if (isLoggedIn) {  api.getInfoServer()
   .then((res) => {
     setCurrentUser(res);
     console.log(res);
@@ -50,8 +50,8 @@ React.useEffect(() => {
     .then((res) => {
       setCardsData(res);
     })
-    .catch(console.error);
-}, [isLoggedIn, navigate]);
+    .catch(console.error);}
+}, [isLoggedIn]);
 
 //закрытие-открытие попапов
 function closeAllPopups() {
@@ -150,7 +150,7 @@ React.useEffect(() => {
 }, [navigate]);
 
 const handleLogout = () => {
-  localStorage.removeItem("token");
+  localStorage.removeItem('token');
   setIsLoggedIn(false);
 }
 
